@@ -4,7 +4,7 @@ import React from 'react';
 //function components are stateless
 const Header = function () {
     return (
-        <div className="header">
+        <div className="header" style={{ textAlign: 'center', padding: 20, backgroundColor: 'black', color:'white',textTransform: "uppercase" }}>
             Phone Directory
         </div>
     );
