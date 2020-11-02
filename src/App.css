@@ -1,7 +1,8 @@
-.main-container{
-    margin:1px;
-    margin-top:0;
+.main-container {
+    margin: 1px;
+    margin-top: 0;
 }
+
 .add-user {
     margin-top: 15px;
     margin-left: 0;
@@ -13,7 +14,14 @@
     text-align: center;
     margin-bottom: 20px;
     border: 0;
-    margin-left:12px;
+    margin-left: 12px;
+}
+
+.back-btn {
+    background-color: silver;
+    color:black;
+    font-size:85%;
+    font-weight:500;
 }
 
 .grid-container {
@@ -42,4 +50,41 @@
     text-align: center;
     font-weight: 550;
     border: 0;
+}
+
+.form-container {
+    margin-left: 12px;
+}
+
+label {
+    color: grey;
+}
+
+form {
+    width: 30%;
+}
+
+input {
+    margin-left: 15px;
+    width:55%;
+    padding-top:6px;
+    padding-bottom:6px;
+    font-size:90%;
+    text-align: left;
+    border : 1px solid silver;
+}
+
+.subscribe-info {
+    margin-top:30px;
+    margin-left: 12px;
+}
+
+.subscribe-header {
+    color:lightblue;
+    font-weight:550;
+    margin-bottom:0px;
+}
+
+.subscribe-info> span{
+    color:grey;
 }

@@ -1,6 +1,8 @@
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Header from './Header';
 import './App.css'
+import AddSubscriber from './AddSubscriber';
 
 function App() {
   let userInfo = [
@@ -9,10 +11,23 @@ function App() {
     { id: 3, name: "Luke Taylor", number: 976976123 },
     { id: 4, name: "Dave Gamacho", number: 23231231 }
   ];
+
+  function addUser(e) {
+    //todo later
+    e.preventDefault();
+    //alert("adduser clicked");
+    ReactDOM.render(
+      <React.StrictMode>
+        <AddSubscriber/>
+      </React.StrictMode>,
+      document.getElementsByName('root')[0]
+    );
+  }
+
   return (
     <div className="main-container">
-      <Header heading="Phone Directory"/>
-      <button className="add-user">Add</button>
+      <Header heading="Phone Directory" />
+      <button className="add-user" onClick={addUser}>Add</button>
       <div className="grid-container">
         <div className="grid-item"><b>Name</b></div>
         <div className="grid-item"><b>Phone</b></div>
@@ -23,7 +38,7 @@ function App() {
           return <div key={user.id} className="grid-container">
             <div className="grid-item">{user.name}</div>
             <div className="grid-item">{user.number}</div>
-            <div className="grid-item"><button class="del-user">Delete</button></div>
+            <div className="grid-item"><button className="del-user">Delete</button></div>
           </div>
         })}
     </div>
