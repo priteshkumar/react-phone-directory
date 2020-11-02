@@ -4,10 +4,10 @@ import './Header.css';
 //import { Component } from 'react';
 
 //function components are stateless
-const Header = function () {
+const Header = function (props) {
     return (
         <div className="header">
-            Phone Directory
+            {props.heading}
         </div>
     );
 }

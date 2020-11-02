@@ -11,17 +11,12 @@ function App() {
   ];
   return (
     <div className="main-container">
-      <Header />
+      <Header heading="Phone Directory"/>
       <button className="add-user">Add</button>
       <div className="grid-container">
         <div className="grid-item"><b>Name</b></div>
         <div className="grid-item"><b>Phone</b></div>
         <div className="grid-item>"></div>
-      </div>
-      <div className="grid-container">
-        <div className="grid-item">Rusty Russellbach</div>
-        <div className="grid-item">939393939</div>
-        <div className="grid-item"><button class="del-user">Delete</button></div>
       </div>
       {
         userInfo.map(user => {
