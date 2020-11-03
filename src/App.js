@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import Header from './Header';
 import './App.css'
-import AddSubscriber from './AddSubscriber';
+//import AddSubscriber from './AddSubscriber';
+import {Link} from 'react-router-dom';
 
 function App() {
   let userInfo = [
@@ -12,22 +13,11 @@ function App() {
     { id: 4, name: "Dave Gamacho", number: 23231231 }
   ];
 
-  function addUser(e) {
-    //todo later
-    e.preventDefault();
-    //alert("adduser clicked");
-    ReactDOM.render(
-      <React.StrictMode>
-        <AddSubscriber/>
-      </React.StrictMode>,
-      document.getElementsByName('root')[0]
-    );
-  }
-
+  
   return (
     <div className="main-container">
       <Header heading="Phone Directory" />
-      <button className="add-user" onClick={addUser}>Add</button>
+      <Link to='/add'><button className="add-user">Add</button></Link>
       <div className="grid-container">
         <div className="grid-item"><b>Name</b></div>
         <div className="grid-item"><b>Phone</b></div>
